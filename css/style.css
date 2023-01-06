@@ -1,0 +1,82 @@
+/* ----- Fonts ----- */
+@font-face {
+  font-family: "Roboto";
+  src:  url(../fonts/roboto.woff2) format("woff2"),
+        url(../fonts/roboto.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:  url(../fonts/robotomedium.woff2) format("woff2"),
+        url(../fonts/robotomedium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:  url(../fonts/robotobold.woff2) format("woff2"),
+        url(../fonts/robotobold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ----- Variables ----- */
+:root {}
+
+/* ----------------------------- */
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+.page-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--basic-white);
+}
+
+/* ----- Прячет заголовки ----- */
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+/* ----------------------------- */
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+/* ----------------------------- */
+.main {
+  flex: 1 0 auto;
+}
+/* ----------------------------- */
+.footer {
+  flex: 1 0 auto;
+}
+/* ----------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* ----------------------------- */
