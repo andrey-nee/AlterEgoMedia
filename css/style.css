@@ -117,6 +117,9 @@ img {
   margin: 0;
   padding: 0;
 }
+.title:not(.tagline__subtitle) {
+  margin-bottom: 45px;
+}
 .subtitle {
   font-family: "Impact", Arial, sans-serif;
   font-weight: 400;
@@ -145,6 +148,12 @@ img {
 .main-navigation__link {
   text-decoration: none;
   color: var(--basic-white);
+  transition: 0.2s;
+}
+.main-navigation__link:hover {
+  color: var(--basic-orange);
+  transition: 0.2s;
+
 }
 .main-header__logo {
 }
@@ -166,6 +175,13 @@ img {
   padding: 8px 16px;
   border-radius: 20px;
   display: block;
+  transition: 0.2s;
+}
+.main-header__contacts-link:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  transition: 0.2s;
+
 }
 /* ----- PROMO ----- */
 .promo {
@@ -184,6 +200,7 @@ img {
   display: flex;
   justify-content: center;
   padding: 650px 0px 29px;
+  z-index: 2;
 }
 .promo__socials-item {
 }
@@ -193,6 +210,11 @@ img {
 .promo__socials-link {
   text-decoration: none;
   color: var(--basic-white);
+  transition: 0.2s;
+}
+.promo__socials-link:hover {
+  color: var(--basic-orange);
+  transition: 0.2s;
 }
 /* ----- TAGLINE ----- */
 .tagline {
@@ -271,7 +293,6 @@ img {
 .about__title {
 }
 .about__subtitle {
-  margin-bottom: 45px;
 }
 .about__content {
   display: grid;
@@ -367,19 +388,31 @@ span.about__experience-description {
   margin-bottom: 172px;
 }
 .team__title {
-  margin-bottom: 45px;
 }
 .team__list {
   display: flex;
   justify-content: space-between;
 }
 .team__item {
+  height: 425px;
 }
 .team__item:not(:last-child) {
   padding-right: 5px;
 }
 .team__image {
   margin-bottom: 20px;
+  max-width: 285px;
+  max-height: 360px;
+  transition: 0.2s;
+}
+.team__image:hover {
+  transform: rotate(-12deg);
+  transition: 0.2s;
+}
+.team__image:hover ~ .team__teammate-name {
+  color: var(--basic-orange);
+  padding-top: 15px;
+  transition: 0.2s;
 }
 .team__description {
 }
@@ -390,6 +423,7 @@ span.about__experience-description {
   line-height: 1.1;
   margin: 0;
   padding: 0;
+  transition: 0.2s;
 }
 .team__teammate-position {
   margin: 0;
@@ -402,7 +436,6 @@ span.about__experience-description {
   margin-bottom: 69px;
 }
 .contacts__title {
-  margin-bottom: 45px;
 }
 .contacts__content {
   display: flex;
@@ -504,6 +537,22 @@ span.about__experience-description {
   display: inline-block;
   max-width: 100%;
   text-align: center;
+  transition: 0.2s;
+}
+.contacts__form-button:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  transition: 0.2s;
 }
 .contacts__map {
+}
+
+.blank__container {
+  padding: 45px 0px;
+}
+.blank__description {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.4;
 }
