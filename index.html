@@ -39,7 +39,7 @@
             </a>
           </div>
           <div class="main-header__contacts">
-            <a href="#" class="main-header__contacts-link uppercase">Свяжитесь с нами</a>
+            <a href="blank.html" class="main-header__contacts-link uppercase">Свяжитесь с нами</a>
           </div>
         </div>
       </header>
@@ -47,17 +47,31 @@
         <div class="promo__container">
           <h1 class="promo__main-title visually-hidden">Главная страница</h1>
           <h2 class="promo-title visually-hidden">Промо</h2>
-          <ul class="promo__socials-list list">
-            <li class="promo__socials-item">
-              <a href="#" class="promo__socials-link uppercase">Instagram</a>
-            </li>
-            <li class="promo__socials-item">
-              <a href="#" class="promo__socials-link uppercase">Youtube</a>
-            </li>
-            <li class="promo__socials-item">
-              <a href="#" class="promo__socials-link uppercase">Facebook</a>
-            </li>
-          </ul>
+
+          <div class="promo__content">
+
+            <div class="promo__video-container">
+              <video autoplay muted loop preload="auto" class="promo__video" id="video">
+                <source type="video/webm" src="video/Final Cannes Graded v2.webm">
+                <source type="video/webm" src="video/Final Cannes Graded v2.mp4">
+              </video>
+
+            </div>
+            <button class="promo__video-controls button-volume" id="volume"></button>
+
+            <ul class="promo__socials-list list">
+              <li class="promo__socials-item">
+                <a href="blank.html" class="promo__socials-link uppercase">Instagram</a>
+              </li>
+              <li class="promo__socials-item">
+                <a href="blank.html" class="promo__socials-link uppercase">Youtube</a>
+              </li>
+              <li class="promo__socials-item">
+                <a href="blank.html" class="promo__socials-link uppercase">Facebook</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </section>
       <section class="tagline">
@@ -74,33 +88,62 @@
         <div class="portfolio__container">
           <h2 class="portfolio__title visually-hidden">Наши работы</h2>
           <ul class="portfolio__list list">
-            <li class="portfolio__item" style="background-image: url(img/promo-01.jpg)">
-              <!-- <div class="portfolio__item-image">
-                <img src="img/promo-01.jpg" alt="Парень сидит в офисе, на фоне кирпичной стены" width="1200px" height="347px">
-              </div> -->
+
+            <li class="portfolio__item">
+              <a href="blank.html" class="portfolio__link-container">
+                <div class="portfolio__item-image">
+                  <img src="img/promo-01.jpg" alt="Парень сидит в офисе, на фоне кирпичной стены" width="1200px" height="347px">
+                </div>
+              </a>
               <div class="portfolio__item-content">
                 <h3 class="portfolio__subtitle uppercase subtitle">Paw Way</h3>
-                <a href="#" class="portfolio__link portfolio__link--violet">Рекламный ролик</a>
+                <a class="portfolio__link portfolio__link--violet">Рекламный ролик</a>
+              </div>
+            </li>
+
+            <li class="portfolio__item">
+              <a href="blank.html" class="portfolio__link-container">
+                <div class="portfolio__item-image">
+                  <img src="img/promo-02.jpg" alt="Парень сидит в офисе, на фоне кирпичной стены" width="1200px" height="347px">
+                </div>
+              </a>
+              <div class="portfolio__item-content">
+                <h3 class="portfolio__subtitle uppercase subtitle">Orient Group</h3>
+                <a class="portfolio__link portfolio__link--dark-blue">Имиджевый ролик</a>
+              </div>
+            </li>
+
+            <li class="portfolio__item">
+              <a href="blank.html" class="portfolio__link-container">
+                <div class="portfolio__item-image">
+                  <img src="img/promo-03.jpg" alt="Парень сидит в офисе, на фоне кирпичной стены" width="1200px" height="347px">
+                </div>
+              </a>
+              <div class="portfolio__item-content">
+                <h3 class="portfolio__subtitle uppercase subtitle">Herbalife Nutrition</h3>
+                <a class="portfolio__link portfolio__link--brown">3D презентация для компании</a>
+              </div>
+            </li>
+
+            <!-- <li class="portfolio__item" style="background-image: url(img/promo-01.jpg)">
+              <div class="portfolio__item-content">
+                <h3 class="portfolio__subtitle subtitle">Paw Way</h3>
+                <a href="#" class="portfolio__link portfolio__link--dark-blue">Рекламный ролик</a>
               </div>
             </li>
             <li class="portfolio__item" style="background-image: url(img/promo-02.jpg)">
-              <!-- <div class="portfolio__item-image">
-                <img src="img/promo-02.jpg" alt="Мужчина в костюме в кадре фото-камеры" width="1200px" height="347px">
-              </div> -->
               <div class="portfolio__item-content">
                 <h3 class="portfolio__subtitle subtitle">Orient Group</h3>
                 <a href="#" class="portfolio__link portfolio__link--dark-blue">Имиджевый ролик</a>
               </div>
             </li>
             <li class="portfolio__item" style="background-image: url(img/promo-03.jpg)">
-              <!-- <div class="portfolio__item-image">
-                <img src="img/promo-03.jpg" alt="Съемочная группа за работой" width="1200px" height="347px">
-              </div> -->
               <div class="portfolio__item-content">
                 <h3 class="portfolio__subtitle subtitle">Herbalife Nutrition</h3>
                 <a href="#" class="portfolio__link portfolio__link--brown">3D презентация для компании</a>
               </div>
-            </li>
+            </li> -->
+
           </ul>
         </div>
       </section>
@@ -243,10 +286,11 @@
               </p>
               <form method="get" action="#" class="form">
                 <p class="form__description">Номер телефона</p>
-                <input type="tel" class="form__data" name="phone" placeholder="+998 00 000 00 00" required minlength="9" maxlength="9">
+                <span class="form__country-code">+998</span>
+                <input type="tel" class="form__data" name="phone" placeholder="00 000 00 00" required minlength="9" maxlength="9">
                 <p class="form__description">Как вас зовут</p>
                 <input type="text" class="form__data" name="name" placeholder="Введите" required maxlength="30">
-                <input type="submit" value="Перезвоните мне" class="contacts__form-button"></input>
+                <input type="submit" value="Перезвоните мне" class="contacts__form-button uppercase"></input>
               </form>
             </div>
             <div class="contacts__column contacts__map">
@@ -258,5 +302,7 @@
 
     </div>
   </body>
+
+  <script src="js/script.js"></script>
 
 </html>
