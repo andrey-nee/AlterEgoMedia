@@ -45,6 +45,9 @@
 }
 
 /* ----------------------------- */
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   height: 100%;
@@ -153,7 +156,6 @@ img {
 .main-navigation__link:hover {
   color: var(--basic-orange);
   transition: 0.2s;
-
 }
 .main-header__logo {
 }
@@ -182,16 +184,14 @@ img {
   background-color: var(--basic-white);
   color: var(--basic-black);
   transition: 0.2s;
-
 }
 /* ----- PROMO ----- */
 .promo {
+  min-height: 600px;
+  max-width: 1440px;
+  margin: -125px -120px 100px;
 }
 .promo__container {
-  min-height: 700px;
-  max-width: 1440px;
-  margin: -230px -120px 0px;
-  /* margin: 0px auto; */
 }
 .promo__main-title {
 }
@@ -202,6 +202,7 @@ img {
 .promo__content {
   overflow: hidden;
   position: relative;
+  min-height: 100%;
 }
 .promo__content::after {
   content: "";
@@ -219,19 +220,19 @@ img {
   justify-content: center;
   position: relative;
   z-index: 1;
-  padding: 0px 0px 56.25%;
+  padding: 0px 0px 41.5%;
 }
 .promo__video {
   width: 100%;
   height: auto;
-
   position: absolute;
   top: 0;
-  left: 0;
+  justify-content: center;
+  object-fit: cover;
 }
 .button-volume {
   position: absolute;
-  bottom: 140px;
+  bottom: 40px;
   right: 40px;
   width: 55px;
   height: 55px;
@@ -256,7 +257,7 @@ img {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 100px;
+  bottom: 0;
   left: 0;
   width: 100%;
   padding: 0px 0px 29px;
@@ -278,12 +279,12 @@ img {
 }
 /* ----- TAGLINE ----- */
 .tagline {
-  z-index: 4;
+  margin: 0px 0px 60px;
+  /* z-index: 4; */
 }
 .tagline__container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 100px 0px 60px;
 }
 .tagline__title {
 }
@@ -300,29 +301,34 @@ img {
 }
 /* ----- PORTFOLIO ----- */
 .portfolio {
+  margin-bottom: 170px;
 }
 .portfolio__container {
-  margin-bottom: 170px;
 }
 .portfolio__title {
 }
 .portfolio__list {
 }
 .portfolio__item {
-  height: 341px;
+  height: 343px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  /* padding: 24px 22px; */
 }
 .portfolio__item:not(:last-child) {
   margin-bottom: 12px;
 }
-.portfolio__link-container {
-  color: var(--basic-white);
+.portfolio__item-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
 }
-.portfolio__link-container:hover ~ .portfolio__item-content{
+.portfolio__item-mask:hover ~ .portfolio__item-content {
   color: var(--basic-orange);
 }
 .portfolio__item-image {
@@ -331,6 +337,7 @@ img {
   overflow: hidden;
 }
 .portfolio__item-image img {
+  display: block;
 }
 .portfolio__item-content {
   position: absolute;
@@ -366,9 +373,9 @@ img {
 }
 /* ----- ABOUT ----- */
 .about {
+  margin-bottom: 132px;
 }
 .about__container {
-  margin-bottom: 138px;
 }
 .about__title {
 }
@@ -412,8 +419,6 @@ img {
   padding-right: 20px;
 }
 .about__portfolio-link {
-  /* color: var(--basic-white); */
-
 }
 .about__tag-list {
   display: flex;
@@ -444,9 +449,6 @@ img {
 }
 .about__experience-item {
 }
-/* .about__experience-item:not(:last-child) {
-  padding-right: 50px;
-} */
 .about__experience-description {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 500;
@@ -463,9 +465,9 @@ span.about__experience-description {
 }
 /* ----- TEAM ----- */
 .team {
+  margin-bottom: 170px;
 }
 .team__container {
-  margin-bottom: 172px;
 }
 .team__title {
 }
@@ -511,9 +513,9 @@ span.about__experience-description {
 }
 /* ----- CONTACTS ----- */
 .contacts {
+  margin-bottom: 69px;
 }
 .contacts__container {
-  margin-bottom: 69px;
 }
 .contacts__title {
 }
@@ -646,8 +648,8 @@ span.about__experience-description {
 }
 .form__submit-button {
   font-family: "Inter", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 12px;
   line-height: 1.4;
   color: var(--basic-white);
   background-color: var(--basic-orange);
@@ -675,4 +677,16 @@ span.about__experience-description {
   font-weight: 400;
   font-size: 28px;
   line-height: 1.4;
+}
+.blank__link {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.4;
+  color: var(--basic-white);
+  transition: 0.2s;
+}
+.blank__link:hover {
+  color: var(--basic-orange);
+  transition: 0.2s;
 }
