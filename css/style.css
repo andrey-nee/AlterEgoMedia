@@ -589,37 +589,62 @@ span.about__experience-description {
 .form__description {
   margin: 0px 0px 12px;
   padding: 0;
+  display: block;
 }
-.form {
+.form__input-container {
   position: relative;
 }
 .form__country-code {
   position: absolute;
-  top: 32px;
+  top: 0;
   left: 0;
   color: var(--basic-white);
   z-index: 3;
 }
-.form input[type=tel] {
+/* .form input:not(input[type=submit]) { */
+.form__field--phone,
+.form__field--name {
   margin: 0px 0px 34px;
   background-color: transparent;
+  box-sizing: border-box;
+  width: 100%;
+}
+/* .form input[type=tel] { */
+.form__field--phone {
   border: none;
   border-bottom: 1px solid var(--basic-dark-grey);
+  color: var(--basic-white);
   padding: 0px 0px 12px 40px;
-  width: 100%;
-  color: var(--basic-white);
-  position: relative;
 }
-.form input[type=text] {
-  margin: 0px 0px 34px;
-  background-color: transparent;
+/* .form input[type=text] { */
+.form__field--name {
   border: none;
   border-bottom: 1px solid var(--basic-dark-grey);
-  padding-bottom: 12px;
-  width: 100%;
   color: var(--basic-white);
+  padding: 0px 0px 12px 0px;
+  width: 100%;
 }
-.contacts__form-button {
+.form input.error {
+  border-bottom: 1px solid var(--basic-red);
+  width: 100%;
+}
+.form__field--phone:invalid,
+.form__field--name:invalid {
+  border-bottom: 1px solid var(--basic-red);
+  width: 100%;
+}
+
+.form__error {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  color: var(--basic-red);
+  /* margin: -34px 0px 0px 0px; */
+}
+.form span.error {
+  color: var(--basic-red);
+}
+.form__submit-button {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -634,7 +659,7 @@ span.about__experience-description {
   text-align: center;
   transition: 0.2s;
 }
-.contacts__form-button:hover {
+.form__submit-button:hover {
   background-color: var(--basic-white);
   color: var(--basic-black);
   transition: 0.2s;
