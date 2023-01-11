@@ -284,13 +284,26 @@
               <p class="contacts__form-descrition">
                 Оставьте заявку и наш специалист свяжется с вами в ближайшее время
               </p>
-              <form method="get" action="#" class="form">
-                <p class="form__description">Номер телефона</p>
-                <span class="form__country-code">+998</span>
-                <input type="tel" class="form__data" name="phone" placeholder="00 000 00 00" required minlength="9" maxlength="9">
-                <p class="form__description">Как вас зовут</p>
-                <input type="text" class="form__data" name="name" placeholder="Введите" required maxlength="30">
-                <input type="submit" value="Перезвоните мне" class="contacts__form-button uppercase"></input>
+              <form method="post" action="#" class="contacts__form form">
+
+                <label for="phone" class="form__description">Номер телефона</label>
+                <!-- <p class="form__description">Номер телефона</p> -->
+                <div class="form__input-container">
+                  <input type="tel" class="form__field form__field--phone" id="phone" name="phone" placeholder="00 000 00 00">
+                  <span class="form__country-code">+998</span>
+                  <!-- <div class="form__error error">ERROR TEXT</div> -->
+                </div>
+
+
+                <label for="name" class="form__description">Как вас зовут</label>
+                  <!-- <p class="form__description">Как вас зовут</p> -->
+                  <div class="form__input-container">
+                    <input type="text" class="form__field form__field--name" id="name" name="name" placeholder="Введите" maxlength="30">
+                  <!-- <div class="form__error error">ERROR TEXT</div> -->
+                  </div>
+
+                <input type="submit" class="form__submit-button uppercase" id="submit" value="Перезвоните мне"></input>
+
               </form>
             </div>
             <div class="contacts__column contacts__map">
