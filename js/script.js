@@ -103,7 +103,6 @@ form.addEventListener('submit', function (event) {
     errorMessage02.innerHTML = 'Номер формата +998 XX XXX XX XX'
     formPhone.parentElement.appendChild(errorMessage02)
     formPhone.classList.add('error')
-
   }
   else{
     console.log(formPhone.value, 'Соответствует')
