@@ -54,7 +54,8 @@ body {
   line-height: 1;
 }
 .page-body {
-  max-width: 1440px;
+  /* max-width: 1440px; */
+  max-width: 100%;
   margin: 0 auto;
   font-family: "Inter", Arial, sans-serif;
   font-style: normal;
@@ -143,6 +144,7 @@ img {
   height: 110px;
 }
 .main-navigation {
+  z-index: 3;
 }
 .main-navigation__list {
 }
@@ -172,6 +174,7 @@ img {
   transition: 0.2s;
 }
 .main-header__contacts {
+  z-index: 4;
 }
 .main-header__contacts-link {
   font-family: "Inter", Arial, sans-serif;
@@ -192,13 +195,36 @@ img {
   color: var(--basic-black);
   transition: 0.2s;
 }
+
+/* ----- центруем лого ----- */
+  .main-header__container {
+    position: relative;
+  }
+  .main-header__logo {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .logo-image {
+    display: block;
+    margin: 0 auto;
+  }
+  .logo-image svg {
+    display: block;
+    margin: 0 auto;
+  }
+/* ----------------------------- */
+
 /* ----- PROMO ----- */
 .promo {
-  min-height: 600px;
-  max-width: 1440px;
-  margin: -125px -120px 100px;
+  margin: -125px -120px 0px;
 }
 .promo__container {
+  margin-bottom: 100px;
+  min-height: 100%;
+  /* max-width: 1440px; */
 }
 .promo__main-title {
 }
@@ -257,7 +283,7 @@ img {
   background-image: url("../img/icon_sound-on.svg") ;
 }
 .button-volume:hover {
-  opacity: 0.6;
+  opacity: 0.4;
   transition: 0.2s;
 }
 .promo__socials-list {
@@ -286,16 +312,16 @@ img {
 }
 /* ----- TAGLINE ----- */
 .tagline {
-  margin: 0px 0px 60px;
-  /* z-index: 4; */
 }
 .tagline__container {
+  margin-bottom: 60px;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
 .tagline__title {
 }
 .tagline__subtitle {
+  padding-right: 10px;
 }
 .tagline__description {
   font-family: "Inter", Arial, sans-serif;
@@ -308,9 +334,9 @@ img {
 }
 /* ----- PORTFOLIO ----- */
 .portfolio {
-  margin-bottom: 170px;
 }
 .portfolio__container {
+  margin-bottom: 170px;
 }
 .portfolio__title {
 }
@@ -325,6 +351,9 @@ img {
 }
 .portfolio__item:not(:last-child) {
   margin-bottom: 12px;
+}
+.portfolio__item-container {
+  /* max-height: 100%; */
 }
 .portfolio__item-mask {
   position: absolute;
@@ -341,9 +370,12 @@ img {
 .portfolio__item-image {
   display: flex;
   justify-content: center;
+  /* object-fit: cover; */
   overflow: hidden;
 }
 .portfolio__item-image img {
+  max-height: 343px;
+  max-width: 1200px;
   display: block;
 }
 .portfolio__item-content {
@@ -380,9 +412,9 @@ img {
 }
 /* ----- ABOUT ----- */
 .about {
-  margin-bottom: 132px;
 }
 .about__container {
+  margin-bottom: 132px;
 }
 .about__title {
 }
@@ -391,6 +423,8 @@ img {
 .about__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* display: flex;
+  flex: 1 0 50%; */
 }
 .about__column {
 }
@@ -419,6 +453,8 @@ img {
 }
 .about__portfolio-list {
   display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
 }
 .about__portfolio-item {
 }
@@ -455,6 +491,10 @@ img {
   flex-wrap: wrap;
 }
 .about__experience-item {
+
+}
+.about__experience-item:not(:last-child) {
+  padding-right: 10px;
 }
 .about__experience-description {
   font-family: "Inter", Arial, sans-serif;
@@ -462,6 +502,7 @@ img {
   font-size: 20px;
   line-height: 1.1;
   color: var(--basic-grey);
+  margin: 12px 0px;
 }
 span.about__experience-description {
   font-family: "Impact", Arial, sans-serif;
@@ -472,14 +513,16 @@ span.about__experience-description {
 }
 /* ----- TEAM ----- */
 .team {
-  margin-bottom: 170px;
 }
 .team__container {
+  margin-bottom: 170px;
 }
 .team__title {
 }
 .team__list {
   display: flex;
+  /* flex: 0 1 25%; */
+  /* flex-wrap: wrap; */
   justify-content: space-between;
 }
 .team__item {
@@ -503,6 +546,11 @@ span.about__experience-description {
   padding-top: 15px;
   transition: 0.2s;
 }
+.team__image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 .team__description {
 }
 .team__teammate-name {
@@ -520,22 +568,27 @@ span.about__experience-description {
 }
 /* ----- CONTACTS ----- */
 .contacts {
-  margin-bottom: 69px;
 }
 .contacts__container {
+  margin-bottom: 69px;
+  /* box-sizing: content-box; */
 }
 .contacts__title {
 }
 .contacts__content {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  flex: 0 1 33.333%;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 3fr 3fr 4fr;
+  gap: 60px;
 }
 .contacts__column {
   margin-right: 10px;
 }
-.contacts__column:first-child {
+/* .contacts__column:first-child {
   width: 255px;
-}
+} */
 .contacts__column:last-child {
   margin-right: 0;
 }
@@ -551,6 +604,7 @@ span.about__experience-description {
   text-decoration: none;
   display: block;
   margin-bottom: 14px;
+  white-space: nowrap;
 }
 .contacts__phone-link:last-child {
   margin: 0;
@@ -575,7 +629,8 @@ span.about__experience-description {
 }
 .contacts__email-link {
   background-color: var(--basic-dark-grey);
-  display: inline-block;
+  display: block;
+  width: max-content;
   margin-bottom: 10px;
   padding: 8px 16px;
   border-radius: 20px;
@@ -588,7 +643,7 @@ span.about__experience-description {
 .contacts__address-link {
 }
 .contacts__form {
-  width: 285px;
+  /* width: 285px; */
   box-sizing: border-box;
 }
 .contacts__form-descrition {
@@ -656,9 +711,9 @@ span.about__experience-description {
   color: var(--basic-red);
   /* margin: -34px 0px 0px 0px; */
 }
-.form span.error {
+/* .form span.error {
   color: var(--basic-red);
-}
+} */
 .form__submit-button {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 600;
@@ -667,10 +722,10 @@ span.about__experience-description {
   color: var(--basic-white);
   background-color: var(--basic-orange);
   border: none;
-  padding: 20px 65px;
+  padding: 20px 60px;
   border-radius: 56px;
   display: inline-block;
-  max-width: 100%;
+  min-width: 100%;
   text-align: center;
   transition: 0.2s;
 }
@@ -682,10 +737,10 @@ span.about__experience-description {
 .form__submit-button:active {
   color: var(--basic-orange);
 }
-.contacts__map-container {
+/* .contacts__map-container {
   width: 488px;
   height: 345px;
-}
+} */
 .contacts__map {
   width: 100%;
   height: 100%;
@@ -711,4 +766,318 @@ span.about__experience-description {
 .blank__link:hover {
   color: var(--basic-orange);
   transition: 0.2s;
+}
+
+/* ----- Адаптив ----- */
+@media (min-width:1701px) {
+  /* .wrapper {
+    padding: 0;
+  } */
+  .tagline__container,
+  .portfolio__container,
+  .about__container,
+  .team__container,
+  .contacts__container {
+    padding: 0 120px;
+  }
+}
+
+@media (min-width:1441px) {
+  .tagline,
+  .portfolio,
+  .about,
+  .team,
+  .contacts {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:1370px) {
+  .about__column:last-child {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width:1300px) {
+  .contacts__contacts-container {
+    width: 45%;
+  }
+  .contacts__form-container {
+    width: 40%;
+  }
+  .contacts__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .contacts__map-container {
+    min-width: 70%;
+    min-height: 500px;
+  }
+}
+
+@media (max-width:1150px) {
+  .about__column:last-child {
+    padding-left: 60px;
+  }
+  .wrapper {
+    padding: 0 80px;
+  }
+  .contacts__map-container {
+    min-width: 70%;
+    min-height: 400px;
+  }
+  .portfolio__container {
+    margin-bottom: 140px;
+  }
+  .about__container {
+    margin-bottom: 102px;
+  }
+  .team__container {
+    margin-bottom: 140px;
+  }
+}
+
+@media (max-width:900px) {
+  .contacts__map-container {
+    min-width: 80%;
+    min-height: 350px;
+  }
+  .title {
+    font-size: 80px;
+  }
+  .team__container {
+    margin-bottom: 110px;
+  }
+  .team__item {
+    height: 350px;
+  }
+}
+
+@media (max-width:841px) {
+  .about__portfolio-list {
+    justify-content: center;
+  }
+  .portfolio__container {
+    margin-bottom: 100px;
+  }
+  .about__container {
+    margin-bottom: 82px;
+  }
+  .team__container {
+    margin-bottom: 90px;
+  }
+}
+
+@media (max-width:790px) {
+  .wrapper {
+    padding: 0 60px;
+  }
+  .title {
+    font-size: 60px;
+  }
+  .subtitle {
+    font-size: 50px;
+  }
+  .about__description {
+    font-size: 24px;
+  }
+  .about__tag-link {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+}
+@media (max-width:720px) {
+  .portfolio__item {
+    height: 300px;
+  }
+  .portfolio__item-image img {
+    max-height: 300px;
+    max-width: 1200px;
+    display: block;
+  }
+  span.about__experience-description {
+    font-size: 55px;
+  }
+  .about__experience-description {
+    font-size: 18px;
+    margin: 10px 0px 12px;
+  }
+  .blank__description {
+    font-size: 18px;
+  }
+  .blank__link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:655px) {
+  /* ----- прячем кнопку в шапке ----- */
+  .main-header__contacts {
+    display: none;
+  }
+/* ----------------------------- */
+  .about__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__column:last-child {
+    padding: 0;
+  }
+  .about__portfolio-list {
+    margin-bottom: 30px;
+  }
+  .team__container {
+    overflow: hidden;
+  }
+  .team__list {
+    min-width: 1000px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .team__item {
+    height: 400px;
+  }
+  .team__image:hover {
+    transform: none;
+  }
+  .team__image:hover ~ .team__teammate-name {
+    padding-top: 0px;
+  }
+  .contacts__contacts-container {
+    min-width: 60%;
+  }
+  .contacts__form-container {
+    min-width: 60%;
+    order: -1;
+  }
+  .contacts__map-container {
+    min-width: 100%;
+    min-height: 350px;
+  }
+}
+
+@media (max-width:550px) {
+  .promo__container {
+    margin-bottom: 80px;
+  }
+  .title {
+    font-size: 50px;
+  }
+  .title:not(.tagline__subtitle) {
+    margin-bottom: 30px;
+  }
+  .subtitle {
+    font-size: 40px;
+  }
+  .tagline__container {
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+  }
+  .tagline__subtitle {
+    padding: 0px 0px 15px;
+  }
+  .tagline__description {
+    font-weight: 400;
+  }
+  .portfolio__container {
+    margin-bottom: 80px;
+  }
+  .portfolio__item {
+    height: 250px;
+  }
+  .portfolio__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .portfolio__item-image img {
+    max-height: 250px;
+    max-width: 1200px;
+    display: block;
+  }
+  .portfolio__item-content {
+    padding: 15px 4px;
+  }
+  .portfolio__link {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+  .about__container {
+    margin-bottom: 80px;
+  }
+  .about__description {
+    margin: 0px 0px 15px;
+  }
+  .about__description--grey:last-of-type {
+    margin-bottom: 30px;
+  }
+  .about__portfolio-list {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about__portfolio-item:not(:last-child) {
+    padding-right: 0;
+  }
+  .about__logo-1 {
+    width: 70px;
+    height: 62px;
+  }
+  .about__logo-2 {
+    width: 67px;
+    height: 59px;
+  }
+  .about__logo-3 {
+    width: 59px;
+    height: 59px;
+  }
+  .about__logo-4 {
+    width: 119px;
+    height: 69px;
+  }
+  .about__tag-link {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+  .about__tag-list {
+    margin-bottom: 34px;
+  }
+  .about__experience-description {
+    font-size: 16px;
+    margin: 10px 0px 12px;
+  }
+  .team__container {
+    margin-bottom: 60px;
+  }
+  .contacts__content {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0;
+  }
+  .contacts__form-container {
+    min-width: 100%;
+    margin-bottom: 60px;
+  }
+  .contacts__contacts-container {
+    width: 100%;
+    min-width: none;
+    margin-bottom: 25px;
+  }
+  .contacts__subtitle {
+    text-transform: uppercase;
+  }
+  .contacts__map-container {
+    min-height: 252px;
+  }
+  .contacts__map {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media (max-width:500px) {
+  .wrapper {
+    padding: 0 20px;
+  }
 }
