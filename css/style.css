@@ -164,6 +164,13 @@ img {
 .logo-image {
   color: var(--basic-white);
 }
+.logo-image-svg path {
+  transition: 0.2s;
+}
+.logo-image:hover .logo-image-svg path {
+  fill: var(--basic-orange);
+  transition: 0.2s;
+}
 .main-header__contacts {
 }
 .main-header__contacts-link {
@@ -232,25 +239,25 @@ img {
 }
 .button-volume {
   position: absolute;
-  bottom: 40px;
-  right: 40px;
+  bottom: 30px;
+  right: 120px;
   width: 55px;
   height: 55px;
   z-index: 5;
   transition: 0.2s;
   cursor:pointer;
-  background-color: rgba(255, 255, 255, 0.6);
-  background-image: url("../img/icons_mute.png");
+  background-color: transparent;
   background-size: 45px 45px;
+  border: none;
+  background-image: url("../img/icon_sound-off.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  border-radius: 5px;
 }
 .button-volume.mute {
-  background-image: url("../img/icons_unmute.png") ;
+  background-image: url("../img/icon_sound-on.svg") ;
 }
 .button-volume:hover {
-  color: var(--basic-orange);
+  opacity: 0.6;
   transition: 0.2s;
 }
 .promo__socials-list {
@@ -603,6 +610,7 @@ span.about__experience-description {
   color: var(--basic-white);
   z-index: 3;
 }
+
 /* .form input:not(input[type=submit]) { */
 .form__field--phone,
 .form__field--name {
@@ -630,12 +638,17 @@ span.about__experience-description {
   border-bottom: 1px solid var(--basic-red);
   width: 100%;
 }
-.form__field--phone:invalid,
-.form__field--name:invalid {
+.form input.error:focus {
+  border-bottom: 1px solid var(--basic-white);
+}
+.form__field:invalid {
   border-bottom: 1px solid var(--basic-red);
   width: 100%;
 }
-
+.form__field:focus {
+  outline: none;
+  border-bottom: 1px solid var(--basic-white);
+}
 .form__error {
   position: absolute;
   top: 35px;
@@ -666,9 +679,18 @@ span.about__experience-description {
   color: var(--basic-black);
   transition: 0.2s;
 }
-.contacts__map {
+.form__submit-button:active {
+  color: var(--basic-orange);
 }
-
+.contacts__map-container {
+  width: 488px;
+  height: 345px;
+}
+.contacts__map {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/map.png");
+}
 .blank__container {
   padding: 45px 0px;
 }
