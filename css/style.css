@@ -208,14 +208,8 @@ img {
     left: 0;
     right: 0;
     margin: 0 auto;
-  }
-  .logo-image {
-    display: block;
-    margin: 0 auto;
-  }
-  .logo-image svg {
-    display: block;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 /* ----------------------------- */
 
