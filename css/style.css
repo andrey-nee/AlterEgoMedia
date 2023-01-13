@@ -925,9 +925,6 @@ span.about__experience-description {
   .wrapper {
     overflow: auto;
   }
-  .promo {
-    margin: -125px -60px 0px;
-  }
   .about__content {
     display: flex;
     flex-direction: column;
@@ -1093,8 +1090,5 @@ span.about__experience-description {
 @media (max-width:500px) {
   .wrapper {
     padding: 0 20px;
-  }
-  .promo {
-    margin: -125px -20px 0px;
   }
 }
