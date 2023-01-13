@@ -922,9 +922,6 @@ span.about__experience-description {
     display: none;
   }
 /* ----------------------------- */
-  .wrapper {
-    overflow: auto;
-  }
   .about__content {
     display: flex;
     flex-direction: column;
