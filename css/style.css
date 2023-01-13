@@ -521,8 +521,6 @@ span.about__experience-description {
 }
 .team__list {
   display: flex;
-  /* flex: 0 1 25%; */
-  /* flex-wrap: wrap; */
   justify-content: space-between;
 }
 .team__item {
@@ -817,6 +815,12 @@ span.about__experience-description {
   }
 }
 
+@media (max-width:1264px) {
+  .about__portfolio-list {
+    justify-content: center;
+  }
+}
+
 @media (max-width:1150px) {
   .about__column:last-child {
     padding-left: 60px;
@@ -918,6 +922,9 @@ span.about__experience-description {
     display: none;
   }
 /* ----------------------------- */
+  .wrapper {
+    overflow: auto;
+  }
   .about__content {
     display: flex;
     flex-direction: column;
@@ -928,16 +935,20 @@ span.about__experience-description {
   .about__portfolio-list {
     margin-bottom: 30px;
   }
-  .team__container {
-    overflow: hidden;
+  .team__list::-webkit-scrollbar {
+    display: none;
   }
   .team__list {
-    min-width: 1000px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 425px;
   }
   .team__item {
     height: 400px;
+  }
+  .team__image {
+    min-width: 285px;
   }
   .team__image:hover {
     transform: none;
