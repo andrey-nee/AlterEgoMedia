@@ -7,6 +7,14 @@ var formName = form.querySelector('.form__field--name')
 var submit = form.querySelector('.form__submit-button')
 var old = 0;
 
+var burger = document.querySelector('.main-header__menu-burger')
+var nav = document.querySelector('.main-navigation')
+
+// Меню бургер для мобилок
+burger.addEventListener('click', function () {
+  burger.classList.toggle('active');
+  nav.classList.toggle('active');
+});
 
 // Включение\Отключение звука видеофона
 volume.addEventListener('click', function () {
