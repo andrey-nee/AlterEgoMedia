@@ -116,4 +116,3 @@ form.addEventListener('submit', function (event) {
     console.log(formPhone.value, 'Соответствует')
   }
 });
-
