@@ -54,7 +54,9 @@ function popupClose(popupActive, doUnlock = true) {
       bodyUnlock();
     }
   }
-  player.stopVideo();
+  players.forEach(function (el) { // Останавливаем все видео iframe
+    el.stopVideo();
+  });
 }
 
 function bodyLock() {
@@ -126,22 +128,44 @@ document.addEventListener('keydown', function (e) {
   }
 })();
 
-
+// Скрипт для управления iframe
 // загружаем код JavaScript API проигрывателя IFrame
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// Определяем переменную player, которая относится к встраиваемому проигрывателю
-function onYouTubePlayerAPIReady() {
-  player = new YT.Player('iframe-1', {
-    events: {
-      'onReady': onPlayerReady
+var playerInfoList = [{
+  id: 'iframe-1'
+}, {
+  id: 'iframe-2'
+}, {
+  id: 'iframe-3'
+}];
+
+function onYouTubeIframeAPIReady() {
+  if (typeof playerInfoList === 'undefined') return;
+
+  for (var i = 0; i < playerInfoList.length; i++) {
+    var curplayer = createPlayer(playerInfoList[i]);
+    players[i] = curplayer;
+  }
+}
+
+var players = new Array();
+
+function createPlayer(playerInfo) {
+  return new YT.Player(playerInfo.id, {
+    videoId: playerInfo.videoId,
+    playerVars: {
+      showinfo: 0,
     }
   });
 }
 
-function onPlayerReady(event) {
-  player.stopVideo();
-}
+// Кнопка стоп, которая останавливает все iframe видео
+$('#stop').click(function () {
+  players.forEach(function (el) {
+    el.stopVideo();
+  });
+});
