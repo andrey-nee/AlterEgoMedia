@@ -413,6 +413,9 @@ body.lock {
 .popup-close {
   display: block;
 }
+.popup__content iframe {
+  z-index: 11;
+}
 
 /* ----- ABOUT ----- */
 .about__container {
@@ -872,12 +875,11 @@ span.about__experience-description {
     max-height: 400px;
   }
   .popup__close-container {
-    bottom: -65px;
+    top: -65px;
     right: 0;
     left: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
   }
 }
 

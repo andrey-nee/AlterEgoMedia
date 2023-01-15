@@ -54,6 +54,7 @@ function popupClose(popupActive, doUnlock = true) {
       bodyUnlock();
     }
   }
+  player.stopVideo();
 }
 
 function bodyLock() {
@@ -124,3 +125,23 @@ document.addEventListener('keydown', function (e) {
       Element.prototype.msMatchesSelector;
   }
 })();
+
+
+// загружаем код JavaScript API проигрывателя IFrame
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// Определяем переменную player, которая относится к встраиваемому проигрывателю
+function onYouTubePlayerAPIReady() {
+  player = new YT.Player('iframe-1', {
+    events: {
+      'onReady': onPlayerReady
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  player.stopVideo();
+}
