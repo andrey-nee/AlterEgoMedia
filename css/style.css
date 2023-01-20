@@ -256,20 +256,8 @@ body.lock {
   background-image: url("../img/icon_sound-off.svg");
   background-repeat: no-repeat;
   background-position: center center;
+  font-size: 16px;
 }
-/* ----- Выключаем стили кнопок для Safari IOS ----- */
-button,
-.button-volume {
-  -webkit-appearance: none;
-  -moz-appearance:    none;
-  appearance:         none;
-}
-button:focus,
-.button-volume:focus {
-  outline: none;
-}
-/* ----------------------------- */
-
 .button-volume.mute {
   background-image: url("../img/icon_sound-on.svg") ;
 }
