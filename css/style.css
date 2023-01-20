@@ -155,6 +155,7 @@ body.lock {
 }
 .logo-image {
   color: var(--basic-white);
+  z-index: 4;
 }
 .logo-image-svg path {
   transition: 0.2s;
@@ -192,7 +193,7 @@ body.lock {
   }
   .main-header__logo {
     position: absolute;
-    top: 8px;
+    top: 18px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -256,10 +257,27 @@ body.lock {
   background-repeat: no-repeat;
   background-position: center center;
 }
+/* ----- Выключаем стили кнопок для Safari IOS ----- */
+button,
+.button-volume {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+}
+button:focus,
+.button-volume:focus {
+  outline: none;
+}
+/* ----------------------------- */
+
 .button-volume.mute {
   background-image: url("../img/icon_sound-on.svg") ;
 }
 .button-volume:hover {
+  opacity: 0.4;
+  transition: 0.2s;
+}
+.button-volume:focus {
   opacity: 0.4;
   transition: 0.2s;
 }
@@ -451,6 +469,7 @@ body.lock {
 .about__portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .about__portfolio-item:not(:last-child) {
   padding-right: 20px;
@@ -903,6 +922,7 @@ span.about__experience-description {
     position: absolute;
     top: 5px;
     right: 0;
+    cursor: pointer;
   }
   .main-header__menu-burger span {
     position: absolute;
