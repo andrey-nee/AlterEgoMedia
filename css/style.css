@@ -245,8 +245,8 @@ body.lock {
   position: absolute;
   bottom: 30px;
   right: 120px;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   z-index: 5;
   transition: 0.2s;
   cursor:pointer;
@@ -256,7 +256,6 @@ body.lock {
   background-image: url("../img/icon_sound-off.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  font-size: 16px;
 }
 .button-volume.mute {
   background-image: url("../img/icon_sound-on.svg") ;
