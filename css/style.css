@@ -264,10 +264,6 @@ body.lock {
   opacity: 0.4;
   transition: 0.2s;
 }
-/* .button-volume:focus {
-  opacity: 0.4;
-  transition: 0.2s;
-} */
 .promo__socials-list {
   display: flex;
   justify-content: center;
@@ -856,12 +852,9 @@ span.about__experience-description {
 }
 
 @media (max-width:768px) {
-  /* .button-volume:hover,
-  .button-volume:focus,
-  .button-volume:active { */
-    .button-volume:hover {
-    opacity: 1;
-    transition: none;
+  .button-volume:hover {
+  opacity: 1;
+  transition: none;
   }
 }
 
