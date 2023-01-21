@@ -260,14 +260,14 @@ body.lock {
 .button-volume.mute {
   background-image: url("../img/icon_sound-on.svg") ;
 }
-/* .button-volume:hover {
-  opacity: 0.4;
-  transition: 0.2s;
+.button-volume:hover {
+  opacity: 1;
+  /* transition: 0.2s; */
 }
 .button-volume:focus {
-  opacity: 0.4;
-  transition: 0.2s;
-} */
+  opacity: 1;
+  /* transition: 0.2s; */
+}
 .promo__socials-list {
   display: flex;
   justify-content: center;
