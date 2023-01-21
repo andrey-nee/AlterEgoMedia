@@ -261,12 +261,12 @@ body.lock {
   background-image: url("../img/icon_sound-on.svg") ;
 }
 .button-volume:hover {
-  opacity: 1;
-  /* transition: 0.2s; */
+  opacity: 0.4;
+  transition: 0.2s;
 }
 .button-volume:focus {
-  opacity: 1;
-  /* transition: 0.2s; */
+  opacity: 0.4;
+  transition: 0.2s;
 }
 .promo__socials-list {
   display: flex;
@@ -854,6 +854,16 @@ span.about__experience-description {
     padding: 6px 14px;
   }
 }
+
+@media (max-width:768px) {
+  .button-volume:hover,
+  .button-volume:focus,
+  .button-volume:active {
+    opacity: 1;
+    transition: none;
+  }
+}
+
 @media (max-width:720px) {
   .portfolio__item {
     height: 300px;
