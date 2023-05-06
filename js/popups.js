@@ -141,6 +141,8 @@ var playerInfoList = [{
   id: 'iframe-2'
 }, {
   id: 'iframe-3'
+}, {
+  id: 'iframe-4'
 }];
 
 function onYouTubeIframeAPIReady() {
