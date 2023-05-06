@@ -334,9 +334,10 @@ body.lock {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  max-height: 341px;
 }
 .portfolio__item-image img {
-  max-height: 343px;
+  max-height: 347px;
   max-width: 1200px;
   display: block;
 }
