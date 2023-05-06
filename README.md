@@ -1,5 +1,4 @@
 # AlterEgoMedia
 
-Вёрстка макета Alter Ego Media.  
-Посмотреть [можно тут](https://andrey-nee.github.io/AlterEgoMedia).
->Резиновая вёрстка, HTML5, CSS3, JavaScript.
+Вёрстка реального проекта от [Alter Ego Media](https://aemedia.uz/).  
+>Адаптивная вёрстка, HTML5, CSS3, JavaScript.
